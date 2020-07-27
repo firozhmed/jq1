@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
+    <title>TextArea</title>
+
+    <style>
+        body
+        {
+            background-color: rgb(151, 137, 137);
+        }
+form
+{
+    background-color: #eee;
+}
+
+    </style>
+</head>
+<body>
+   <div class="container   col-lg-8    m-auto  ">  
+<form>
+     
+    <legend  class="ml-5">Limit character TextArea </legend>
+     <textarea class="ml-5"  rows="8"  cols="100"  maxlength="200" id="comment"></textarea>
+     <p class="ml-5">Content limited to 200 characters. Remaining: <span  id="Rem">200</span></p>
+
+</form>
+</div>
+
+
+
+
+
+
+<script>
+
+    var maxLength = 200;
+    $('TextArea').keyup(function()
+     {
+      var textlen = maxLength - $(this).val().length;
+      $('#Rem').text(textlen);
+    });
+    
+    </script>  
+
+
+        
+
+
+</body>
+</html>
